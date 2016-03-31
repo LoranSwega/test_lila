@@ -19,7 +19,8 @@ $posts = get_posts();
 
 </head>
 <body>
-	<header>
+
+	<header >
 		<div class="banner">
 			<img src="img/banner.png" />
 		</div>
@@ -27,7 +28,7 @@ $posts = get_posts();
 			<img src="img/logo.png" />
 		</div>
 	</header>
-	<main>
+	<main class="col-xs-12">
 		<h1>Office de Tourisme de Martigues-sur-mer</h1>
 		<section>
 			<h2>Les bons plans du territoire</h2>
@@ -45,11 +46,13 @@ $posts = get_posts();
 				if ($type=="news")
 				{
 					//color rond = bleu
+					$type="Actualité -".date('d/m/y', $date);
 					$icone="<div class='ico_news'></div>";
 				}
 				else
 				{
 					//color rond = orange
+					$type="Promotion-".date('d/m/y', $date);
 					$icone="<div class='ico_deals'></div>";
 				}
 	/** Le test suivant si l'user est premium ou non **/
@@ -63,12 +66,12 @@ $posts = get_posts();
 					//color du nom = noir
 					$is_prem="<h3 class='non_premium'>".$username."</h3>";
 				}
-				echo "<a href='".$url."' target='_blank'><article>";
+				echo "<a href='".$url."' target='_blank'><article><div class='rectangle'></div>";
 				echo "<div class='header_ann'>
 				<div class='avatar col-1'>
 					<img src='img/profile_pics/".$avatar."' />
 				</div>";
-				echo "<div class='col-2'>".$is_prem .date('d/m/y', $date)."</div>";
+				echo "<div class='col-2'>".$is_prem .$type."</div>";
 				echo "<div class='col-3'>".$icone."</div></div>";
 				echo "<div class='contenu'>".$content."</div>";
 				echo "</article></a>";	

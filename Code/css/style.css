@@ -18,9 +18,18 @@ a
 	text-decoration: none;
 	color:#333333;
 }
+a:hover
+{
+	text-decoration: none;
+	color:#333333;
+}
 body
 {
 	background: #f8f8f8;
+}
+.container-fluid
+{
+	padding:0px;
 }
 header
 {
@@ -71,7 +80,7 @@ section h2
 {
 	border-bottom:1px #999999  solid;
 	margin: 20px 0px;
-	font-weight: lighter; /* Paarce que j'ai pas la bonne typo */
+	font-weight: lighter; /* Parce que j'ai pas la bonne typo */
 }
 article
 {
@@ -80,10 +89,22 @@ article
 	border-radius:4px 4px;
 	padding:5px;
 	margin:15px 0px;
+	position: relative;
 }
+.rectangle {
+   background-image: url("../img/triangle.gif");
+   height: 19px;
+   left: -8px;
+   position: absolute;
+   top: 25px;
+   width: 8px;
+
+}
+
 .header_ann
 {
 	margin-bottom: 15px;
+	position:relative;
 }
 .col-1,.col-2,.col-3
 {
@@ -95,11 +116,15 @@ article
 }
 .col-2
 {
-	
+	position: absolute;
+	top:0px;
+	margin-left:5px;
 }
 .col-3
 {
-	
+	position: absolute;
+	top:0px;
+	right:5px;
 }
 .avatar
 {
@@ -128,11 +153,11 @@ article
 }
 .ico_news
 {
-	background: #25313e;
+	background:url(../img/news.gif) center no-repeat, #be5521;
 }
 .ico_deals
 {
-	background: #be5521;
+	background: url(../img/deal.gif) center no-repeat, #25313e;
 }
 footer
 {
