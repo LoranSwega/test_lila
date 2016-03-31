@@ -30,6 +30,9 @@ $posts = get_posts();
 	</header>
 	<main class="col-xs-12">
 		<h1>Office de Tourisme de Martigues-sur-mer</h1>
+		<p class="intro">
+			Quam aeternitati pulchrum factorum factorum consiliis autem sit non curant per quam haberet rem haberet superasset rem cur rem bonos.
+		</p>
 		<section>
 			<h2>Les bons plans du territoire</h2>
 <?php
@@ -42,20 +45,20 @@ $posts = get_posts();
 				$type=$posts[$i]->type;
 				$content=$posts[$i]->post_content;
 				$url=$posts[$i]->url;
-	/** Le test suivant si l'annonce est du type news ou deal **/
+	/** Teste si l'annonce est du type news ou deal **/
 				if ($type=="news")
 				{
 					//color rond = bleu
-					$type="Actualité -".date('d/m/y', $date);
+					$type="Actualité -";
 					$icone="<div class='ico_news'></div>";
 				}
 				else
 				{
 					//color rond = orange
-					$type="Promotion-".date('d/m/y', $date);
+					$type="Promotion - ";
 					$icone="<div class='ico_deals'></div>";
 				}
-	/** Le test suivant si l'user est premium ou non **/
+	/** Teste si l'user est premium ou non **/
 				if ($premium==true)
 				{
 					//color du nom = orange
@@ -71,7 +74,7 @@ $posts = get_posts();
 				<div class='avatar col-1'>
 					<img src='img/profile_pics/".$avatar."' />
 				</div>";
-				echo "<div class='col-2'>".$is_prem .$type."</div>";
+				echo "<div class='col-2'>".$is_prem ."<div class='sub'>".$type.date('d/m/y', $date)."</div></div>";
 				echo "<div class='col-3'>".$icone."</div></div>";
 				echo "<div class='contenu'>".$content."</div>";
 				echo "</article></a>";	
