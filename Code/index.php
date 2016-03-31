@@ -41,45 +41,40 @@ $posts = get_posts();
 				$type=$posts[$i]->type;
 				$content=$posts[$i]->post_content;
 				$url=$posts[$i]->url;
+	/** Le test suivant si l'annonce est du type news ou deal **/
 				if ($type=="news")
 				{
 					//color rond = bleu
+					$icone="<div class='ico_news'></div>";
 				}
 				else
 				{
 					//color rond = orange
+					$icone="<div class='ico_deals'></div>";
 				}
+	/** Le test suivant si l'user est premium ou non **/
 				if ($premium==true)
 				{
-					//color du nom rond = orange
+					//color du nom = orange
+					$is_prem="<h3 class='premium'>".$username."</h3>";
 				}
 				else
 				{
 					//color du nom = noir
+					$is_prem="<h3 class='non_premium'>".$username."</h3>";
 				}
-				echo "<article><div>";
-				echo "<div class='avatar'><img src='img/profile_pics/".$avatar."' /></div>";
-				echo "<div><h3class='titreAnnonce'>".$username."</h3>".date('d/m/Y', $date)."</div>";
-				echo "</div></article>";
-				
-				
+				echo "<a href='".$url."' target='_blank'><article>";
+				echo "<div class='header_ann'>
+				<div class='avatar col-1'>
+					<img src='img/profile_pics/".$avatar."' />
+				</div>";
+				echo "<div class='col-2'>".$is_prem .date('d/m/y', $date)."</div>";
+				echo "<div class='col-3'>".$icone."</div></div>";
+				echo "<div class='contenu'>".$content."</div>";
+				echo "</article></a>";	
 				
 			}
-			//echo var_dump($posts);
 ?>
-			<article>
-				<div>
-					<div class='avatar'>
-						
-					</div>
-					<div class="titreAnnonce">
-						<h3>Restaurant du golf</h3>
-					</div>
-					<div>
-						icone
-					</div>
-				</div>
-			</article>
 		
 		</section>
 		

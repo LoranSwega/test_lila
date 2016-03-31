@@ -13,6 +13,11 @@
 {
 	font-family:'Helvetica Neue' , 'sans serif';
 }
+a
+{
+	text-decoration: none;
+	color:#333333;
+}
 body
 {
 	background: #f8f8f8;
@@ -60,7 +65,7 @@ h1
 section
 {
 	color:#333333;
-	text-transform: uppercase;
+	
 }
 section h2
 {
@@ -73,10 +78,61 @@ article
 	background: #fff;
 	border: 1px solid #e8e8e8;
 	border-radius:4px 4px;
+	padding:5px;
+	margin:15px 0px;
+}
+.header_ann
+{
+	margin-bottom: 15px;
+}
+.col-1,.col-2,.col-3
+{
+	display: inline-block;
+}
+.col-1
+{
+	
+}
+.col-2
+{
+	
+}
+.col-3
+{
+	
+}
+.avatar
+{
+	width:60px;
+	
 }
 .avatar img
 {
 	width:60px;
+	border-radius: 4px 4px;
+	border:1px solid #e8e8e8;
+}
+.premium
+{
+	color:#be5521;
+}
+.non_premium
+{
+	color:black;
+}
+.ico_news, .ico_deals
+{
+	width:32px;
+	height: 32px;
+	border-radius: 75px 75px;
+}
+.ico_news
+{
+	background: #25313e;
+}
+.ico_deals
+{
+	background: #be5521;
 }
 footer
 {
