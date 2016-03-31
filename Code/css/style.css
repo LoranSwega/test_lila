@@ -1,0 +1,87 @@
+/******************************************* 
+
+#f8f8f8 couleur de fond
+#25313e  bleu foncé
+#be5521 couleur titre (~ orange foncé)
+#333333 gris du texte
+#999999 gris du trait
+#989898 gris clair (footer)
+#e8e8e8 bordure gris clair
+
+*******************************************/
+*
+{
+	font-family:'Helvetica Neue' , 'sans serif';
+}
+body
+{
+	background: #f8f8f8;
+}
+header
+{
+	margin-bottom: 36px;
+	height: 289px;
+}
+.banner 
+{
+	background: #25313e ;
+	height:209px;
+	overflow: hidden;
+}
+.banner img
+{
+	width:100%;
+}
+.logo
+{
+	background: #fff;
+	border: 4px #fff solid;
+	border-radius:5px 5px;
+	position: absolute;
+    left: 10%;
+  	top: 148px;
+	max-width: 128px;  	
+}
+.logo img
+{
+	width: 100%;
+}
+
+main
+{
+	padding:0px 20px;
+}
+
+h1
+{
+	color:#be5521;
+	text-transform: uppercase;
+}
+section
+{
+	color:#333333;
+	text-transform: uppercase;
+}
+section h2
+{
+	border-bottom:1px #999999  solid;
+	margin: 20px 0px;
+	font-weight: lighter; /* Paarce que j'ai pas la bonne typo */
+}
+article
+{
+	background: #fff;
+	border: 1px solid #e8e8e8;
+	border-radius:4px 4px;
+}
+.avatar img
+{
+	width:60px;
+}
+footer
+{
+	color:#989898;
+	font-size:10px;
+	font-style: italic;
+	padding:0px 20px;
+}
